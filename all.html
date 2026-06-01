@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            .montserrat {
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            }
+            .color {
+                background-color: pink; 
+            }
+            .container {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+            }
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .hover-btn {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .container:hover .hover-btn {
+                opacity: 1;
+                visibility: visible;
+                bottom: 30px;
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <title>All books</title>
+    </head>
+    <body class="montserrat">
+        <div class="container-fluid color">
+            <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-info">
+                <a class="navbar-brand text-warning" target="" href="index.html">Index</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" target="" href="all.html">All books</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <br>
+            <form class="mx-auto text-center" id="form">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-dark text-center">Fantasy</h2>
+                    </div>
+                </div>
+                <div id="caro1" class="carousel slide" data-touch="false" data-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/mistborn.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(7.99, 'Mistborn')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Mistborn<br>Brandon Sanderson<br>$7.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/thewellofascension.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(7.99, 'Well of Ascension')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Well of Ascension<br>Brandon Sanderson<br>$7.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/theheroofages.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(7.99, 'The Hero of Ages')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Hero of Ages<br>Brandon Sanderson<br>$7.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/thealloyoflaw.avif" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(23.99, 'The Alloy of Law')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Alloy of Law<br>Brandon Sanderson<br>$23.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/shadowsofself.avif" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(23.99, 'Shadows of Self')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Shadows of Self<br>Brandon Sanderson<br>$23.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/thebandsofmourning.avif" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(23.99, 'The Bands of Mourning')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Bands of Mourning<br>Brandon Sanderson<br>$23.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/thelostmetal.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(23.99, 'The Lost Metal')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Lost Metal<br>Brandon Sanderson<br>$23.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/circe.avif" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(19.99, 'Circe')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Circe<br>Madeline Miller<br>$19.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/songofachilles.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(17.99, 'The Song of Achilles')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Song of Achilles<br>Madeline Miller<br>$17.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/witchescurse.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(16.99, 'Eric Linnaeus - The Witchs Curse')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Eric Linnaeus - The Witch's Curse<br>Kikito Lynn<br>$16.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/scornedheirs.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(16.99, 'Eric Linnaeus - Scorned Heirs')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Eric Linnaeus - Scorned Heirs<br>Kitito Lynn<br>$16.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/afamilyofunkindness.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(16.99, 'Eric Linnaeus - A Family of Unkindness')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Eric Linnaeus - A Family of Unkindness<br>Kikito Lynn<br>$16.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/flameofthefae.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(16.99, 'Eric Linnaeus - Flame of the Fae')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Eric Linnaeus - Flame of the Fae<br>Kikito Lynn<br>$16.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/alternate.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(18.99, 'Alternate')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Alternate<br>Kikito Lynn<br>$18.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/mythhunters.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(6.99, 'The Myth Hunters')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Myth Hunters<br>Christopher Golden<br>$6.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/mythhunters.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(6.99, 'The Myth Hunters')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Myth Hunters<br>Christopher Golden<br>$6.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/goodomens.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(17.99, 'Good Omens')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Good Omens<br>Terry Pratchett & Neil Gaiman<br>$17.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/deadlyeducation.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(18, 'A Deadly Education')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">A Deadly Education<br>Naomi Novik<br>$18.00</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/goodandevil.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(8.99, 'The School for Good and Evil')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The School for Good and Evil<br>Soman Chainani<br>$8.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/unbroken.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(16.99, 'The Unbroken')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Unbroken<br>C.L. Clark<br>$16.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-target="#caro1" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Pre</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-target="#caro1" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-dark text-center">LGBTQ+</h2>
+                    </div>
+                </div>
+                <div id="caro2" class="carousel slide" data-touch="false" data-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/songofachilles.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(17.99, 'The Song of Achilles')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Song of Achilles<br>Madeline Miller<br>$17.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/hazelthorn.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(19.99, 'Hazelthorn')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Hazelthorn<br>CG Drews<br>$19.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/dontlettheforestin.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(19.99, 'Dont Let the Forest In')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Don't Let the Forest In<br>CG Drews<br>$19.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/witchescurse.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(16.99, 'Eric Linnaeus - The Witchs Curse')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Eric Linnaeus - The Witch's Curse<br>Kikito Lynn<br>$16.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/scornedheirs.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(16.99, 'Eric Linnaeus - Scorned Heir')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Eric Linnaeus - Scorned Heirs<br>Kitito Lynn<br>$16.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/afamilyofunkindness.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(16.99, 'Eric Linnaeus - A Family of Unkindness')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Eric Linnaeus - A Family of Unkindness<br>Kikito Lynn<br>$16.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/flameofthefae.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(16.99, 'Eric Linnaeus - Flame of the Fae')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Eric Linnaeus - Flame of the Fae<br>Kikito Lynn<br>$16.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/alternate.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(18.99, 'Alternate')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Alternate<br>Kikito Lynn<br>$18.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/unbroken.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(16.99, 'The Unbroken')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Unbroken<br>C.L. Clark<br>$16.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/nimona1.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(15.99, 'Nimona')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Nimona<br>ND Stevenson<br>$15.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/flameofthefae.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(16.99, 'Eric Linnaeus - Flame of the Fae')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Eric Linnaeus - Flame of the Fae<br>Kikito Lynn<br>$16.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/alternate.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(18.99, 'Alternate')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Alternate<br>Kikito Lynn<br>$18.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/unbroken.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(16.99, 'The Unbroken')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Unbroken<br>C.L. Clark<br>$16.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/nimona1.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(15.99, 'Nimona')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Nimona<br>ND Stevenson<br>$15.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/nimona2.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(22.99, 'Nimona, 10 year anniversary')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Nimona (10 year anniversary) <br>ND Stevenson<br>$22.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-target="#caro2" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Pre</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-target="#caro2" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-dark text-center">Classics</h2>
+                    </div>
+                </div>
+                <div id="caro3" class="carousel slide" data-touch="false" data-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/theadventuresoftomsawyer.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(7.99, 'The Adventures of Tom Sayer')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Adventures of Tom Sayer<br>Mark Twain<br>$7.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/huckleberry.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(10.99, 'The Adventures of Huckleberry Finn')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Adventures of Huckleberry Finn<br>Mark Twain<br>$10.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/natsby.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(7.99, 'The Great Gatsby')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Great Gatsby<br>F. Scott Fitzgerald<br>$7.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/anne.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(4.99, 'The Diary of a Young Girl')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Diary of a Young Girl<br>Anne Frank<br>$4.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/douglass.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(2.95, 'Narrative of the Life of Frederick Douglass, an American Slave')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Narrative of the Life of Frederick Douglass, an American Slave<br>Fredrick Douglass<br>$2.95</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-dark text-center">Young Adult</h2>
+                    </div>
+                </div>
+                <div id="caro4" class="carousel slide" data-touch="false" data-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/songofachilles.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(17.99, 'The Song of Achilles')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Song of Achilles<br>Madeline Miller<br>$17.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/hazelthorn.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(19.99, 'Hazelthorn')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Hazelthorn<br>CG Drews<br>$19.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/dontlettheforestin.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(19.99, 'Dont Let the Forest In')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Don't Let the Forest In<br>CG Drews<br>$19.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/deadlyeducation.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(18, 'A Deadly Education')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">A Deadly Education<br>Naomi Novik<br>$18.00</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/circe.avif" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(19.99, 'Circe')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Circe<br>Madeline Miller<br>$19.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-dark text-center">Comics/manga</h2>
+                    </div>
+                </div>
+                <div id="caro5" class="carousel slide" data-touch="false" data-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/vanitas1.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(13, 'The Case Study of Vanitas, Vol. 1')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Case Study of Vanitas, Vol. 1<br>Jun Mochizuki<br>$13.00</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/vanitas9.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(13, 'The Case Study of Vanitas, Vol. 9')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Case Study of Vanitas, Vol. 9<br>Jun Mochizuki<br>$13.00</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/vanitas11.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(13, 'The Case Study of Vanitas, Vol. 11')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Case Study of Vanitas, Vol. 11<br>Jun Mochizuki<br>$13.00</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/nimona1.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(15.99, 'Nimona')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Nimona<br>ND Stevenson<br>$15.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/nimona2.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(22.99, 'Nimona, 10 year anniversary')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Nimona (10 year anniversary) <br>ND Stevenson<br>$22.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/scott1.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(11.99, 'Scott Pilgrims Precious Little Life')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Scott Pilgrim's Precious Little Life<br>Bryan Lee O'Malley<br>$11.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/scott2.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(11.99, 'Scott Pilgrim vs. the World')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Scott Pilgrim vs. the World<br>Bryan Lee O'Malley<br>$11.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/scott4.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(11.99, 'Scott Pilgrim Gets It Together')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Scott Pilgrim Gets It Together<br>Bryan Lee O'Malley<br>$11.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/scott5.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(11.99, 'Scott Pilgrim vs. the Universe')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Scott Pilgrim vs. the Universe<br>Bryan Lee O'Malley<br>$11.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/scott6.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(11.99, 'Scott Pigrims Finest Hour')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Scott Pilgrim's Finest Hour<br>Bryan Lee O'Malley<br>$11.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/scott7.avif" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(24.99, 'Scott Pigrims Finest Hour, Colored')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Scott Pilgrim's Finest Hour (Colored)<br>Bryan Lee O'Malley<br>$24.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/bluelock.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(12.99, 'Blue Lock 1')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Blue Lock 1<br>Muneyuki Kaneshiro<br>$12.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/tokyoaliens.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(12.99, 'Tokyo Aliens 1')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Tokyo Aliens 1<br>Naoe<br>$12.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/bsd4.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(13, 'Bungo Stray Dogs: Beast, Vol. 4')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Bungo Stray Dogs: Beast, Vol. 4<br>Kafka Asagiri<br>$13.00</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/witch1.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(12.99, 'Witch Hat Atelier 1')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Witch Hat Atelier 1<br>Kamome Shirahama<br>$12.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/witch2.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(12.99, 'Witch Hat Atelier 2')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Witch Hat Atelier 2<br>Kamome Shirahama<br>$12.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/witch3.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(12.99, 'Witch Hat Atelier 3')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Witch Hat Atelier 3<br>Kamome Shirahama<br>$12.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/witch4.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(12.99, 'Witch Hat Atelier 4')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Witch Hat Atelier 4<br>Kamome Shirahama<br>$12.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/witch5.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(12.99, 'Witch Hat Atelier 5')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Witch Hat Atelier 5<br>Kamome Shirahama<br>$12.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/witch6.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(12.99, 'Witch Hat Atelier 6')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Witch Hat Atelier 6<br>Kamome Shirahama<br>$12.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/witch5.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(12.99, 'Witch Hat Atelier 5')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Witch Hat Atelier 5<br>Kamome Shirahama<br>$12.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/witch6.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(12.99, 'Witch Hat Atelier 6')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Witch Hat Atelier 6<br>Kamome Shirahama<br>$12.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/witch7.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(12.99, 'Witch Hat Atelier 7')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Witch Hat Atelier 7<br>Kamome Shirahama<br>$12.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                <div class="container">
+                                    <img src="media/dead1.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                    <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(59.99, 'The Walking Dead Compendium 1')">Add</button>
+                                </div>
+                                <div class="mx-auto">
+                                    <p style="font-size: 13px;" class="card-text">The Walking Dead Compendium 1<br>Robert Kirkma<br>$59.99</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-auto text-center">
+                                <div class="container">
+                                    <img src="media/dead2.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                    <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(59.99, 'The Walking Dead Compendium 2')">Add</button>
+                                </div>
+                                <div class="mx-auto">
+                                    <p style="font-size: 13px;" class="card-text">The Walking Dead Compendium 2<br>Robert Kirkma<br>$59.99</p>
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-target="#caro5" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Pre</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-target="#caro5" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-dark text-center">Non-fiction/Science</h2>
+                    </div>
+                </div>
+                <div id="caro6" class="carousel slide" data-touch="false" data-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/anne.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(4.99,'The Diary of a Young Girl')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">The Diary of a Young Girl<br>Anne Frank<br>$4.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/pi.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(20,'Humble Pi: When Math Goes Wrong in the Real World')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Humble Pi: When Math Goes Wrong in the Real World<br>Matt Parker<br>$20.00</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/history.jpg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(19.99, 'History: A Visual Encyclopedia')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">History: A Visual Encyclopedia<br>Smithsonian<br>$19.99</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/douglass.webp" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(2.95, 'Narrative of the Life of Frederick Douglass, an American Slave')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">Narrative of the Life of Frederick Douglass, an American Slave<br>Fredrick Douglass<br>$2.95</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mx-auto text-center">
+                                    <div class="container">
+                                        <img src="media/whatif.jpeg" class="" style="border-radius: 20px;" alt="Sample Image">
+                                        <button type="button" class=" bg-info book text-warning hover-btn" onclick="addValue(30, 'What If? 2: Additional Serious Scientific Answers to Absurd Hypothetical Questions')">Add</button>
+                                    </div>
+                                    <div class="mx-auto">
+                                        <p style="font-size: 13px;" class="card-text">What If? 2: Additional Serious Scientific Answers to Absurd Hypothetical Questions<br>Randall Munroe<br>$30.00</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <button type="button" class="bg-info text-warning" onclick="checkOut()">Check out</button>
+            </form>
+            <div class="row">
+                <div class="col-md-12" class="text-center" id="bookNameListSelected"></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12" class="text-center" id="display"></div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-12 mx-auto text-center">
+                    <hr>
+                    <form>
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input type="email" class="info" id="email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="info" id="pass">
+                        </div>
+                        <button type="submit" onclick="makeAccount()" class="mx-auto text-center btn-primary bg-info text-warning">Make an account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+        <script>
+            let subtotal = 0;
+            let dis = 0;
+            let bookArray = [];
+            let bookCostArray = [];
+
+            function makeAccount(){ //Thanks the user for making an account
+                alert("Thank you for making an account!");
+            }
+
+            function addValue(num, bookName) { //This function is what calculates all the values in the final price
+                subtotal = subtotal+num;
+                bookArray.push(bookName);
+                bookCostArray.push(num);
+
+
+                if(subtotal >= 100){
+                    dis = subtotal * .1;
+                    sixSeven = subtotal - dis;
+                    total = sixSeven + tax;
+                } else {
+                    sixSeven = subtotal
+                    tax = subtotal * .1;
+                    total = subtotal + tax
+                }
+            }
+
+            function checkOut() { //This is the function that rounds the numbers and displays them on the document
+                subtotal = subtotal.toFixed(2);
+                tax = tax.toFixed(2);
+                dis = dis.toFixed(2);
+                sixSeven = sixSeven.toFixed(2);
+                total = total.toFixed(2);
+
+                let bookList = '';    
+                for (let index = 0; index < bookArray.length; index++) {
+                    bookList = bookList + ' ' + bookArray[index] + ' | $' + bookCostArray[index] + '<br>'
+                }
+                document.getElementById("bookNameListSelected").innerHTML = bookList;
+
+                document.getElementById("display").innerHTML = 
+                `Subtotal: $${subtotal}<br>
+                Discount: $${dis}<br>
+                Price after discount: $${sixSeven}<br>
+                Tax: $${tax}<br>
+                Total $${total}`;
+            }
+        </script>
+    </body>
+</html>
